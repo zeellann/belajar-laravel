@@ -11,10 +11,20 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/', function(){
+    return view('home');
+});
 
 Route::get('/register', 'AuthController@register');
 
 
 
 Route::get('/welcome, AuthController@welcome_get');
+
+Route:: get('/master', function(){
+    return view('master');
+});
+
+Route::get('/data-tables', function(){
+    return view('data-tables');
+});
